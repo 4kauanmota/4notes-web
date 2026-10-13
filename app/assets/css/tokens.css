@@ -1,0 +1,184 @@
+/*
+ * Tokens do site — os mesmos do app (4notes › app/assets/css/tokens.css):
+ * roxo para ações e estados ativos, amarelo para destaques, neutros puxando para o roxo
+ * e a mesma família tipográfica (Segoe UI Variable no Windows; a do sistema nos outros).
+ *
+ * Tema: atributo data-theme="light|dark" no <html> (script no <head>, antes de desenhar).
+ * Sem JavaScript, vale a preferência do sistema.
+ */
+:root {
+  --font-ui: 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Roboto,
+    'Noto Sans', Ubuntu, Cantarell, sans-serif;
+  --font-display: 'Segoe UI Variable Display', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    Roboto, 'Noto Sans', sans-serif;
+  --font-mono: 'Cascadia Code', 'Cascadia Mono', Consolas, 'SF Mono', Menlo, 'JetBrains Mono', 'DejaVu Sans Mono', monospace;
+
+  --purple-50: #f4f1ff;
+  --purple-100: #eae4ff;
+  --purple-200: #d6cbff;
+  --purple-300: #b8a6ff;
+  --purple-400: #9a80ff;
+  --purple-500: #7c5cfc;
+  --purple-600: #6842ee;
+  --purple-700: #5634cc;
+  --purple-800: #44299f;
+  --purple-900: #2f1f6b;
+  --purple-950: #1d1442;
+
+  --yellow-100: #fff3c4;
+  --yellow-200: #ffe68a;
+  --yellow-300: #ffd84f;
+  --yellow-400: #ffcb2b;
+  --yellow-500: #f5b700;
+  --yellow-800: #7a5600;
+
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+  --r-2xl: 22px;
+
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --t-fast: 120ms;
+  --t-med: 200ms;
+  --t-slow: 320ms;
+
+  /* Escala tipográfica (16 px de base) */
+  --fs-xs: 0.8125rem; /* 13 */
+  --fs-sm: 0.875rem; /* 14 */
+  --fs-base: 1rem; /* 16 */
+  --fs-md: 1.125rem; /* 18 */
+  --fs-lg: 1.3125rem; /* 21 */
+  --fs-xl: clamp(1.375rem, 1.1rem + 1vw, 1.75rem); /* 22 → 28 */
+  --fs-2xl: clamp(2rem, 1.3rem + 2.6vw, 3.25rem); /* 32 → 52 */
+  --fs-hero: clamp(5.25rem, 2.6rem + 9.5vw, 10.5rem); /* 84 → 168 */
+  --fs-slogan: clamp(1.875rem, 1.2rem + 2.6vw, 3.25rem); /* 30 → 52 */
+
+  --gutter: clamp(16px, 4vw, 40px);
+  --container: 1200px;
+  --header-h: 64px;
+}
+
+/* ── Claro ─────────────────────────────────────────────────────────────── */
+:root {
+  color-scheme: light;
+  --bg: #efedf5; /* "chrome" do app: o fundo em volta das telas */
+  --surface: #ffffff;
+  --surface-2: #f8f7fc;
+  --surface-3: #f1eff7;
+  --border: #e5e2ee;
+  --border-strong: #d3cedf;
+
+  --text: #1f1a2b;
+  --text-2: #5b5468;
+  --text-3: #6b6479;
+
+  --primary: #6842ee;
+  --primary-hover: #5634cc;
+  --primary-soft: rgba(124, 92, 252, 0.12);
+  --primary-text: #5634cc;
+  --on-primary: #ffffff;
+  /* Fundo dos botões principais (texto branco com contraste AA nos dois temas) */
+  --btn-primary: #6842ee;
+  --btn-primary-hover: #5634cc;
+
+  --accent: #ffcb2b;
+  --accent-strong: #f5b700;
+  --accent-soft: rgba(255, 203, 43, 0.24);
+  --accent-text: #7a5600;
+  --on-accent: #2b2100;
+
+  --hover: rgba(40, 20, 90, 0.055);
+  --selection: rgba(255, 203, 43, 0.4);
+  --dots: rgba(91, 84, 104, 0.16);
+  --shadow-sm: 0 1px 2px rgba(31, 26, 43, 0.06);
+  --shadow-md: 0 6px 18px rgba(31, 26, 43, 0.08), 0 1px 3px rgba(31, 26, 43, 0.06);
+  --shadow-lg: 0 30px 70px -18px rgba(47, 31, 107, 0.32), 0 10px 24px -12px rgba(31, 26, 43, 0.18);
+  --focus-ring: 0 0 0 3px rgba(124, 92, 252, 0.4);
+  --frame: #ffffff;
+  --frame-border: rgba(47, 31, 107, 0.12);
+  --phone-bezel: #1d1a24;
+
+  /* Bloco "Seus dados" (o mesmo nos dois temas: roxo bem escuro) */
+  --deep: #241a52;
+  --deep-2: #2f1f6b;
+  --deep-text: #f1edff;
+  --deep-text-2: #c4b8f2;
+  --deep-border: rgba(214, 203, 255, 0.16);
+}
+
+/* ── Escuro ────────────────────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --bg: #121016;
+    --surface: #19171f;
+    --surface-2: #16141b;
+    --surface-3: #221f2a;
+    --border: #2c2836;
+    --border-strong: #3a3546;
+    --text: #ece9f3;
+    --text-2: #a9a2b8;
+    --text-3: #8a839a;
+    --primary: #8e72ff;
+    --primary-hover: #a08aff;
+    --primary-soft: rgba(142, 114, 255, 0.16);
+    --primary-text: #b5a3ff;
+    --on-primary: #ffffff;
+    --btn-primary: #6a4ef0;
+    --btn-primary-hover: #7556f2;
+    --accent: #ffd34d;
+    --accent-strong: #ffcb2b;
+    --accent-soft: rgba(255, 211, 77, 0.14);
+    --accent-text: #ffd86a;
+    --hover: rgba(255, 255, 255, 0.05);
+    --selection: rgba(255, 211, 77, 0.26);
+    --dots: rgba(169, 162, 184, 0.13);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 22px rgba(0, 0, 0, 0.32), 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 30px 80px -20px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.03);
+    --focus-ring: 0 0 0 3px rgba(142, 114, 255, 0.5);
+    --frame: #19171f;
+    --frame-border: rgba(255, 255, 255, 0.09);
+    --phone-bezel: #050407;
+    --deep: #1b1440;
+    --deep-2: #261b58;
+  }
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #121016;
+  --surface: #19171f;
+  --surface-2: #16141b;
+  --surface-3: #221f2a;
+  --border: #2c2836;
+  --border-strong: #3a3546;
+  --text: #ece9f3;
+  --text-2: #a9a2b8;
+  --text-3: #8a839a;
+  --primary: #8e72ff;
+  --primary-hover: #a08aff;
+  --primary-soft: rgba(142, 114, 255, 0.16);
+  --primary-text: #b5a3ff;
+  --on-primary: #ffffff;
+  --btn-primary: #6a4ef0;
+  --btn-primary-hover: #7556f2;
+  --accent: #ffd34d;
+  --accent-strong: #ffcb2b;
+  --accent-soft: rgba(255, 211, 77, 0.14);
+  --accent-text: #ffd86a;
+  --hover: rgba(255, 255, 255, 0.05);
+  --selection: rgba(255, 211, 77, 0.26);
+  --dots: rgba(169, 162, 184, 0.13);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 22px rgba(0, 0, 0, 0.32), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 30px 80px -20px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.03);
+  --focus-ring: 0 0 0 3px rgba(142, 114, 255, 0.5);
+  --frame: #19171f;
+  --frame-border: rgba(255, 255, 255, 0.09);
+  --phone-bezel: #050407;
+  --deep: #1b1440;
+  --deep-2: #261b58;
+}
