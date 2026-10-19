@@ -7,8 +7,8 @@ const year = 2026
 <template>
   <footer class="site-footer">
     <div class="container foot">
-      <div class="brand">
-        <LogoMark :size="26" />
+      <div class="brand fold-trigger">
+        <LogoMark :size="26" fold="hover" />
         <div>
           <p class="name">4notes</p>
           <p class="tag">{{ site.slogan }}</p>

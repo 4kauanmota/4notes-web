@@ -1,174 +1,174 @@
 <div align="center">
 
-<img src="public/favicon.svg" alt="Logo do 4notes" width="96" />
+<img src="public/favicon.svg" alt="4notes logo" width="96" />
 
 # 4notes
 
-### ✨ Você decide o que você precisa.
+### ✨ You decide what you need.
 
-Notas, tarefas, mapas mentais, links e timer num só app.<br>
-Ligue as ferramentas que fazem sentido para você, organize do seu jeito e guarde tudo numa pasta sua.
+Notes, tasks, mind maps, links and a timer in a single app.<br>
+Turn on the tools that make sense for you, organize things your way and keep everything in a folder of your own.
 
-**Windows 10 e 11 · Android 7+ · sem conta e sem login**
+**Windows 10 and 11 · Android 7+ · no account and no login**
 
-[Baixar a versão mais recente](https://github.com/4kauanmota/4notes-app/releases/latest) ·
-[Rodar o site](#rodar-no-computador) ·
-[Publicar na Vercel](#publicar-na-vercel)
+[Download the latest version](https://github.com/4kauanmota/4notes-app/releases/latest) ·
+[Run the site](#run-it-locally) ·
+[Deploy to Vercel](#deploy-to-vercel)
 
 <br>
 
-<img src="public/screens/desktop-notes-light-1600.webp" alt="O 4notes no módulo Notas: categorias na lateral, notas em abas e uma nota com checklist, lista numerada e bloco de código." width="860" />
+<img src="public/screens/desktop-notes-light-1600.webp" alt="4notes in the Notes module: categories in the sidebar, notes in tabs and a note with a checklist, a numbered list and a code block." width="860" />
 
 </div>
 
 ---
 
-Este repositório é o **site de apresentação e download do 4notes** (Nuxt 4, gerado como site estático para a Vercel). O texto abaixo apresenta o app do mesmo jeito que o site; a parte técnica do site vem depois.
+This repository is the **4notes presentation and download site** (Nuxt 4, generated as a static site for Vercel). The text below presents the app the same way the site does; the technical part about the site comes after it.
 
-## 🧩 O 4notes é do seu jeito
+## 🧩 4notes works your way
 
-O 4notes não impõe um método. Ele oferece cinco ferramentas e deixa a escolha com você:
+4notes doesn't impose a method. It offers five tools and leaves the choice to you:
 
-- **Ligue só o que usa.** Cada módulo pode ser ativado ou desativado em Configurações › Módulos ou pelo botão direito do menu lateral. Desativar tira o módulo do menu, **sem apagar nenhum dado**, e ele volta como estava quando você religar.
-- **Arrume o menu.** Mude a ordem dos módulos arrastando e escolha se o menu mostra só os ícones ou os ícones com os nomes.
-- **Guarde onde quiser.** Você escolhe a pasta do workspace; tudo fica nela, em Markdown e JSON. Crie quantos workspaces quiser, cada um com seus dados e configurações.
-- **Claro ou escuro.** O tema segue o sistema ou fica como você preferir.
-- **Use no computador e no celular.** A mesma interface no Windows e no Android, adaptada a cada tela.
+- **Turn on only what you use.** Each module can be enabled or disabled in Configurações › Módulos (Settings › Modules) or by right-clicking the sidebar. Disabling removes the module from the menu **without deleting any data**, and it comes back just as it was when you turn it on again.
+- **Arrange the menu.** Change the order of the modules by dragging them and choose whether the menu shows only the icons or the icons with their names.
+- **Store it wherever you want.** You choose the workspace folder; everything stays in it, in Markdown and JSON. Create as many workspaces as you like, each with its own data and settings.
+- **Light or dark.** The theme follows the system or stays the way you prefer.
+- **Use it on your computer and on your phone.** The same interface on Windows and Android, adapted to each screen.
 
-No site, a seção **“Monte o seu 4notes”** mostra isso na prática: ligue e desligue os módulos e veja o menu lateral mudar, como no app.
+On the site, the **“Monte o seu 4notes”** (“Build your 4notes”) section shows this in practice: turn modules on and off and watch the sidebar change, just like in the app.
 
-## 🛠️ As cinco ferramentas
+## 🛠️ The five tools
 
-| | Módulo | O que você ganha |
+| | Module | What you get |
 | :-: | --- | --- |
-| 📝 | **Notas** | Anotações rápidas em abas, com formatação de verdade. Categorias com cor, ícone ou foto, pastas automáticas pelo título, atalhos para a versão anterior e a próxima de uma nota e exportação em TXT ou PDF. |
-| ✅ | **Tarefas** | Datas, categorias e tarefas que se repetem. “Revisar amanhã #estudos” já define a data e a categoria, e a recorrência funciona mesmo com o app fechado. |
-| 🧠 | **Mapa mental** | Ideias como notas ligadas entre si. Shift + arrastar conecta, soltar no vazio cria uma nota conectada e “Reorganizar” arruma o mapa evitando cruzamentos. |
-| 🔗 | **Links** | Cole um endereço e o título e o ícone do site chegam sozinhos. Categorias, busca, ordenação e importação dos favoritos do navegador. |
-| ⏱️ | **Timer** | Cronômetro, temporizador e Pomodoro, com histórico e estatísticas. A contagem vem do relógio, então trocar de módulo ou fechar o app não atrapalha. |
+| 📝 | **Notes** | Quick notes in tabs, with real formatting. Categories with a color, icon or photo, automatic folders based on the title, shortcuts to a note's previous and next version, and export to TXT or PDF. |
+| ✅ | **Tasks** | Dates, categories and recurring tasks. “Revisar amanhã #estudos” (“Review tomorrow #studies”) already sets the date and the category, and recurrence works even with the app closed. |
+| 🧠 | **Mind map** | Ideas as notes linked to each other. Shift + drag connects, dropping on an empty spot creates a connected note and “Reorganizar” (“Reorganize”) tidies up the map while avoiding crossings. |
+| 🔗 | **Links** | Paste an address and the site's title and icon arrive on their own. Categories, search, sorting and import of browser bookmarks. |
+| ⏱️ | **Timer** | Stopwatch, countdown timer and Pomodoro, with history and statistics. The count comes from the clock, so switching modules or closing the app doesn't get in the way. |
 
 <div align="center">
-<img src="public/screens/phone-note-light-360.webp" alt="Uma nota aberta no celular." width="180" />
-<img src="public/screens/phone-tasks-light-360.webp" alt="Tarefas pendentes no celular." width="180" />
-<img src="public/screens/phone-timer-light-360.webp" alt="Um Pomodoro em andamento no celular." width="180" />
+<img src="public/screens/phone-note-light-360.webp" alt="A note open on the phone." width="180" />
+<img src="public/screens/phone-tasks-light-360.webp" alt="Pending tasks on the phone." width="180" />
+<img src="public/screens/phone-timer-light-360.webp" alt="A Pomodoro in progress on the phone." width="180" />
 </div>
 
-## 🔗 Tudo se conecta, se você quiser
+## 🔗 Everything connects, if you want it to
 
-- **Menções com `@`**: numa nota ou tarefa, mencione notas, mapas, tarefas, links salvos e registros do Timer. Um clique abre o item no módulo dele, e renomear pelo app corrige as menções.
-- **Editor sem símbolos na tela**: negrito, marca-texto, cores, listas que se renumeram, checklists, blocos de código coloridos e imagens coladas. O arquivo continua sendo Markdown comum.
-- **Tutoriais com `F1`**: o tutorial do módulo abre ao lado, sem tirar você do que está fazendo.
-- **Atualizações pelo próprio app**: quando sai uma versão nova, o 4notes avisa e instala quando você quiser.
+- **Mentions with `@`**: in a note or task, mention notes, maps, tasks, saved links and Timer records. One click opens the item in its module, and renaming through the app updates the mentions.
+- **An editor with no symbols on screen**: bold, highlight, colors, lists that renumber themselves, checklists, colored code blocks and pasted images. The file is still plain Markdown.
+- **Tutorials with `F1`**: the module's tutorial opens alongside, without taking you away from what you're doing.
+- **Updates from the app itself**: when a new version comes out, 4notes lets you know and installs it whenever you want.
 
-## 📁 Seus dados são arquivos seus
+## 📁 Your data is your files
 
-Sem conta, sem login e sem servidor: o 4notes lê e grava só a pasta que você escolheu. Backup é copiar a pasta, e os arquivos abrem em qualquer editor de texto. Cada arquivo é gravado por inteiro, excluir manda para a Lixeira e as ações mais comuns têm Desfazer.
+No account, no login and no server: 4notes only reads and writes the folder you chose. Backing up means copying the folder, and the files open in any text editor. Each file is written in full, deleting sends things to the Recycle Bin and the most common actions can be undone.
 
 ---
 
-# 🌐 Sobre este site
+# 🌐 About this site
 
-## O que tem na página
+## What's on the page
 
-Uma página só, em português, com tema claro e escuro (segue o sistema; o botão da lua/sol troca e a escolha fica guardada no navegador). O slogan **“Você decide o que você precisa”** abre a página e guia o resto: a seção logo abaixo deixa o visitante montar o próprio 4notes, e as outras mostram as ferramentas que ele pode escolher.
+A single page, in Portuguese, with light and dark themes (it follows the system; the moon/sun button switches it and the choice is saved in the browser). The slogan **“Você decide o que você precisa”** (“You decide what you need”) opens the page and guides the rest: the section right below it lets the visitor build their own 4notes, and the others show the tools they can choose from.
 
-| Seção | O que mostra |
+| Section | What it shows |
 | --- | --- |
-| **Abertura** | A marca (o canto do “4” dobra ao abrir a página), o slogan com um traço amarelo que se estende, os botões de download e o app de verdade: a janela do computador e o celular. |
-| **Monte o seu 4notes** (`#do-seu-jeito`) | Os cinco módulos com switches iguais aos das Configurações do app, combinações de exemplo (Só anotar, Estudos, Projetos, Tudo) e a escolha entre “Ícone e nome” e “Só o ícone”. A prévia do menu lateral liga e desliga cada módulo com a animação de conectar; no celular ela vira a barra de baixo, como no app. Pelo menos um módulo fica ligado, como no app. |
-| **Módulos** (`#modulos`) | Uma ferramenta de cada vez, com captura real, para que serve e o que dá para fazer. Alterna entre **Computador** e **Celular**. Dá para trocar de módulo pela lista, pelas setas do teclado ou clicando no menu lateral da própria captura. |
-| **Recursos** (`#recursos`) | Editor sem símbolos, o app no celular e no dobrável, e uma comparação claro × escuro que se arrasta. |
-| **Menções e dados** (`#conexoes`, `#seus-dados`) | O `@` que liga os módulos (captura real da lista de menções) e a pasta do workspace com os arquivos. |
-| **Baixar** (`#baixar`) | Windows e Android: requisitos, tamanho do arquivo, como instalar e as novidades da versão. |
-| **Encerramento e rodapé** | Chamada final (“é só ligar outro módulo”) e o slogan como assinatura no rodapé. |
+| **Opening** | The brand (the corner of the “4” folds when the page opens), the slogan with a yellow stroke that stretches out, the download buttons and the real app: the computer window and the phone. |
+| **Monte o seu 4notes** (`#do-seu-jeito`) | The five modules with switches identical to the ones in the app's Settings, example combinations (Só anotar, Estudos, Projetos, Tudo: “Just notes”, “Studies”, “Projects”, “Everything”) and the choice between “Ícone e nome” (“Icon and name”) and “Só o ícone” (“Icon only”). The sidebar preview turns each module on and off with the connect animation; on the phone it becomes the bottom bar, as in the app. At least one module stays on, as in the app. |
+| **Modules** (`#modulos`) | One tool at a time, with a real screenshot, what it's for and what you can do with it. Switches between **Computador** (“Computer”) and **Celular** (“Phone”). You can change modules from the list, with the keyboard arrows or by clicking the sidebar in the screenshot itself. |
+| **Features** (`#recursos`) | The symbol-free editor, the app on the phone and on the foldable, and a draggable light × dark comparison. |
+| **Mentions and data** (`#conexoes`, `#seus-dados`) | The `@` that links the modules (a real screenshot of the mentions list) and the workspace folder with its files. |
+| **Download** (`#baixar`) | Windows and Android: requirements, file size, how to install and what's new in the version. |
+| **Closing and footer** | A final call to action (“é só ligar outro módulo”, “just turn on another module”) and the slogan as a signature in the footer. |
 
-Todas as capturas são do **4notes de verdade** (a interface compilada a partir do código do app), com um workspace de demonstração — nada desenhado à mão. A prévia do menu na seção “Monte o seu 4notes” é uma demonstração interativa feita no site, não uma captura.
+All screenshots are of the **real 4notes** (the interface built from the app's code), with a demo workspace — nothing drawn by hand. The menu preview in the “Monte o seu 4notes” section is an interactive demo built into the site, not a screenshot.
 
-## Rodar no computador
+## Run it locally
 
-Requisitos: **Node.js 22.12+**.
+Requirements: **Node.js 22.12+**.
 
 ```bash
 npm install
-npm run dev        # http://localhost:3000, com recarregamento automático
+npm run dev        # http://localhost:3000, with automatic reload
 ```
 
-Para ver a versão final, igual à publicada:
+To see the final version, identical to the published one:
 
 ```bash
-npm run build      # gera o site estático em .output/public
-npm run preview    # serve a pasta gerada (npx serve)
+npm run build      # generates the static site in .output/public
+npm run preview    # serves the generated folder (npx serve)
 ```
 
-`npm run typecheck` confere os tipos (TypeScript estrito).
+`npm run typecheck` checks the types (strict TypeScript).
 
-## Publicar na Vercel
+## Deploy to Vercel
 
-1. Suba esta pasta para um repositório no GitHub (o `.gitignore` já deixa de fora `node_modules`, `.nuxt`, `.output` e `.vercel`).
-2. Na Vercel: **Add New… › Project**, escolha o repositório e confirme. O `vercel.json` já define o framework (Nuxt) e o comando (`npm run build` = `nuxt generate`). Não é preciso configurar diretório de saída: o Nuxt detecta a Vercel e gera o formato que ela espera.
-3. Pronto. Cada `git push` na branch principal publica uma versão nova.
+1. Push this folder to a GitHub repository (the `.gitignore` already leaves out `node_modules`, `.nuxt`, `.output` and `.vercel`).
+2. On Vercel: **Add New… › Project**, choose the repository and confirm. The `vercel.json` already sets the framework (Nuxt) and the command (`npm run build` = `nuxt generate`). There's no need to configure an output directory: Nuxt detects Vercel and generates the format it expects.
+3. Done. Every `git push` to the main branch publishes a new version.
 
-**Domínio próprio (opcional).** O endereço usado no link canônico e na imagem de compartilhamento (`og:image`) vem sozinho do domínio de produção da Vercel. Se você ligar um domínio próprio, crie a variável de ambiente `NUXT_PUBLIC_SITE_URL` (ex.: `https://4notes.app`) em **Settings › Environment Variables** e publique de novo.
+**Custom domain (optional).** The address used in the canonical link and in the sharing image (`og:image`) comes automatically from the Vercel production domain. If you connect a custom domain, create the `NUXT_PUBLIC_SITE_URL` environment variable (e.g. `https://4notes.app`) in **Settings › Environment Variables** and publish again.
 
-## Links de download
+## Download links
 
-Tudo fica em **`app/config/downloads.ts`**:
+Everything lives in **`app/config/downloads.ts`**:
 
-- `githubRepo: '4kauanmota/4notes-app'` — o mesmo repositório que o app usa para se atualizar. Ao abrir a página, o site pergunta ao GitHub qual é a versão mais recente e os botões passam a apontar para o `.exe` e o `.apk` dela. **Publicou uma versão com `npm run release` no 4notes? O site já mostra a nova**, sem precisar publicar o site de novo.
-- `fallback` — a versão conhecida (hoje a **1.6.2**, com os links, tamanhos e notas da versão). É o que vai no HTML gerado e o que vale se o GitHub não responder. Atualize de vez em quando.
-- `platforms` — os textos de cada opção (requisitos, descrição, ajuda).
+- `githubRepo: '4kauanmota/4notes-app'` — the same repository the app uses to update itself. When the page opens, the site asks GitHub for the latest version and the buttons start pointing to its `.exe` and `.apk`. **Published a version with `npm run release` in 4notes? The site already shows the new one**, without having to publish the site again.
+- `fallback` — the known version (currently **1.6.2**, with its links, sizes and release notes). It's what goes into the generated HTML and what applies if GitHub doesn't respond. Update it every now and then.
+- `platforms` — the texts for each option (requirements, description, help).
 
-Para usar outro endereço de download, preencha `url` em `fallback.windows` / `fallback.android` e deixe `githubRepo` vazio. Sem `url`, o botão aparece desativado com “em breve”.
+To use a different download address, fill in `url` in `fallback.windows` / `fallback.android` and leave `githubRepo` empty. Without a `url`, the button appears disabled with “em breve” (“coming soon”).
 
-> A API do GitHub permite 60 consultas por hora por endereço de IP sem login. Passou disso, o visitante vê os dados do `fallback` — por isso vale mantê-lo em dia.
+> The GitHub API allows 60 requests per hour per IP address without logging in. Beyond that, the visitor sees the `fallback` data — which is why it's worth keeping it up to date.
 
-## Trocar as capturas
+## Replacing the screenshots
 
-As imagens ficam em `public/screens/` e a lista (com o texto alternativo de cada uma) em **`app/config/screens.ts`**. Nome dos arquivos: `<id>-<light|dark>-<largura>.webp`, em WebP.
+The images live in `public/screens/` and the list (with each one's alternative text) in **`app/config/screens.ts`**. File names: `<id>-<light|dark>-<width>.webp`, in WebP.
 
-| Grupo | Arquivos | Tamanho original | Larguras geradas |
+| Group | Files | Original size | Generated widths |
 | --- | --- | --- | --- |
-| Computador | `desktop-notes`, `desktop-tasks`, `desktop-mindmap`, `desktop-links`, `desktop-timer`, `desktop-timer-session`, `desktop-settings` | janela de 1280 × 800, em 2× (2560 × 1600) | 960, 1600, 2560 |
-| Celular | `phone-notes`, `phone-note`, `phone-tasks`, `phone-mindmap`, `phone-links`, `phone-timer` | tela de 390 × 844, em 3× | 360, 720 |
-| Dobrável aberto | `fold-notes` | tela de 690 × 830, em 2× | 690, 1380 |
-| Recortes | `crop-editor` (barra de formatação), `crop-mention` (lista do `@`) | recortes da janela em 2× | 765/1530 e 555/1110 |
+| Computer | `desktop-notes`, `desktop-tasks`, `desktop-mindmap`, `desktop-links`, `desktop-timer`, `desktop-timer-session`, `desktop-settings` | 1280 × 800 window, at 2× (2560 × 1600) | 960, 1600, 2560 |
+| Phone | `phone-notes`, `phone-note`, `phone-tasks`, `phone-mindmap`, `phone-links`, `phone-timer` | 390 × 844 screen, at 3× | 360, 720 |
+| Foldable (open) | `fold-notes` | 690 × 830 screen, at 2× | 690, 1380 |
+| Crops | `crop-editor` (formatting bar), `crop-mention` (the `@` list) | crops of the window at 2× | 765/1530 and 555/1110 |
 
-Para trocar, gere o mesmo enquadramento nos dois temas e substitua os arquivos mantendo os nomes. Os botões dos módulos no menu lateral das capturas do computador precisam continuar no mesmo lugar (as áreas clicáveis estão em `RAIL_HOTSPOTS`, em `app/config/modules.ts`).
+To replace them, generate the same framing in both themes and replace the files, keeping the names. The module buttons in the sidebar of the computer screenshots must stay in the same place (the clickable areas are in `RAIL_HOTSPOTS`, in `app/config/modules.ts`).
 
-## Estrutura
+## Structure
 
 ```text
 4notes-web/
 ├── app/
-│   ├── app.vue                 Casca: cabeçalho, página, rodapé, tema e versão
-│   ├── pages/index.vue         A página (ordem das seções)
+│   ├── app.vue                 Shell: header, page, footer, theme and version
+│   ├── pages/index.vue         The page (order of the sections)
 │   ├── components/
-│   │   ├── sections/           Uma seção por arquivo (Hero, Monte o seu 4notes, Módulos, Recursos, Dados, Baixar…)
-│   │   └── ui/                 Marca, ícones, molduras, captura no tema certo, botão de download
+│   │   ├── sections/           One section per file (Hero, Monte o seu 4notes, Modules, Features, Data, Download…)
+│   │   └── ui/                 Brand, icons, frames, screenshot in the right theme, download button
 │   ├── config/
-│   │   ├── downloads.ts        Versão, links e textos de download
-│   │   ├── modules.ts          Os cinco módulos (textos, descrições das Configurações e capturas)
-│   │   ├── screens.ts          Lista das capturas e textos alternativos
-│   │   └── site.ts             Título, slogan, descrição e seções
-│   ├── composables/            Tema, versão do GitHub, entrada na tela
-│   ├── lib/                    Ícones (os mesmos do app) e Markdown das notas de versão
-│   └── assets/css/             tokens.css (as cores do app) e base.css
-├── public/                     Capturas, ícones, imagem de compartilhamento, manifesto
-├── nuxt.config.ts              Metadados, tema antes de desenhar, geração estática
+│   │   ├── downloads.ts        Version, links and download texts
+│   │   ├── modules.ts          The five modules (texts, Settings descriptions and screenshots)
+│   │   ├── screens.ts          List of screenshots and alternative texts
+│   │   └── site.ts             Title, slogan, description and sections
+│   ├── composables/            Theme, GitHub version, on-screen entrance
+│   ├── lib/                    Icons (the same as the app's) and Markdown for the release notes
+│   └── assets/css/             tokens.css (the app's colors) and base.css
+├── public/                     Screenshots, icons, sharing image, manifest
+├── nuxt.config.ts              Metadata, theme before painting, static generation
 └── vercel.json
 ```
 
-## Identidade visual
+## Visual identity
 
-O slogan oficial é **“Você decide o que você precisa.”** Ele fica em `app/config/site.ts` (`site.slogan`, usado no rodapé; o título da página e a descrição também o trazem) e aparece em destaque na abertura. No resto do site a ideia aparece em ações, não em repetição: escolher os módulos, alternar o tema, o menu e o aparelho.
+The official slogan is **“Você decide o que você precisa.”** (“You decide what you need.”). It lives in `app/config/site.ts` (`site.slogan`, used in the footer; the page title and description also include it) and is featured prominently in the opening. In the rest of the site the idea shows up in actions, not in repetition: choosing the modules, switching the theme, the menu and the device.
 
 
-O site usa os **mesmos tokens do app** (`app/assets/css/tokens.css` do 4notes: roxo para ações, amarelo para destaques, neutros puxando para o roxo, temas claro e escuro), a **mesma família tipográfica** (Segoe UI Variable no Windows; a fonte do sistema nos outros), os **mesmos ícones** (`app/lib/icons.ts`) e a **mesma marca**. O fundo pontilhado é o do Mapa Mental, e a lista de módulos imita o menu lateral do app, com o indicador amarelo. Nenhuma fonte, biblioteca de interface ou de ícones é baixada.
+The site uses the **same tokens as the app** (4notes' `app/assets/css/tokens.css`: purple for actions, yellow for highlights, neutrals leaning toward purple, light and dark themes), the **same typeface family** (Segoe UI Variable on Windows; the system font elsewhere), the **same icons** (`app/lib/icons.ts`) and the **same brand**. The dotted background is the Mind Map's, and the module list mimics the app's sidebar, with the yellow indicator. No font, UI library or icon library is downloaded.
 
-Duas diferenças pequenas, por acessibilidade: o cinza mais claro do texto (`--text-3`) ficou um pouco mais escuro no tema claro e os botões principais do tema escuro usam um roxo um pouco mais fechado, para o texto branco ter contraste suficiente.
+Two small differences, for accessibility: the lightest text gray (`--text-3`) is a little darker in the light theme, and the main buttons in the dark theme use a slightly deeper purple, so the white text has enough contrast.
 
-## Acessibilidade e desempenho
+## Accessibility and performance
 
-- Navegação por teclado (link para pular ao conteúdo, foco visível, setas na lista de módulos e na comparação claro × escuro), textos alternativos em todas as capturas e contraste AA conferido com o axe nos dois temas.
-- “Reduzir movimento” do sistema desliga as animações (a dobra da marca, o traço do slogan, a entrada das telas, o encaixe dos módulos no menu e a pasta que aparece linha a linha).
-- O HTML gerado já traz todo o conteúdo; o JavaScript entra para a escolha e a troca de módulos, o tema e a consulta da versão mais recente. Imagens em WebP com tamanhos responsivos e carregamento sob demanda, sem fontes externas.
+- Keyboard navigation (skip-to-content link, visible focus, arrow keys in the module list and in the light × dark comparison), alternative text on every screenshot and AA contrast checked with axe in both themes.
+- The system's “Reduce motion” setting turns off the animations (the brand's fold, the slogan's stroke, the screens' entrance, the modules snapping into the menu and the folder that appears line by line).
+- The generated HTML already contains all the content; JavaScript comes in for choosing and switching modules, the theme and checking for the latest version. WebP images with responsive sizes and lazy loading, no external fonts.

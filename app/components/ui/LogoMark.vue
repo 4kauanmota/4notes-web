@@ -99,8 +99,15 @@ const flap = `lm-flap-${id}`
   }
 }
 
+/*
+ * Ao passar o mouse: a mesma lista de transformações nos dois estados (só o scaleY muda),
+ * então a ponta gira sempre em torno da dobra. Com "none" aqui, o navegador interpolava
+ * também os rotate() e a ponta torcia e esticava para baixo no caminho (até a 1.0.0).
+ * Voltar é suave (sem passar do ponto); desdobrar tem um leve impulso (regra abaixo).
+ */
 .fold-hover .lm-flap {
-  transition: transform 420ms var(--ease-spring);
+  transform: rotate(45deg) scaleY(1) rotate(-45deg);
+  transition: transform 380ms var(--ease-out);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -119,5 +126,12 @@ const flap = `lm-flap-${id}`
 .fold-trigger:hover .logo-mark.fold-hover .lm-flap,
 .fold-trigger:focus-visible .logo-mark.fold-hover .lm-flap {
   transform: rotate(45deg) scaleY(-0.55) rotate(-45deg);
+  transition: transform 520ms var(--ease-spring);
+}
+@media (prefers-reduced-motion: reduce) {
+  .fold-trigger:hover .logo-mark.fold-hover .lm-flap,
+  .fold-trigger:focus-visible .logo-mark.fold-hover .lm-flap {
+    transition: none;
+  }
 }
 </style>

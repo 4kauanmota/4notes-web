@@ -1,6 +1,6 @@
 {
   "name": "4notes-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Site de apresentação e download do 4notes.",
   "private": true,
   "type": "module",
